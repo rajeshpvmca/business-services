@@ -95,15 +95,17 @@
                             <span class="badge bg-primary bg-opacity-10 text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Send a Message</span>
                             <h2 class="display-6 fw-bold lh-sm text-dark mb-0">How can we help?</h2>
                         </div>
-                        <form>
+                        <form action="404.html">
                             <div class="row g-4">
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold text-muted small text-uppercase letter-spacing-1">First Name</label>
-                                    <input type="text" class="form-control form-control-lg bg-light border-0 px-4" placeholder="John" required>
+                                    <input type="text" class="form-control form-control-lg bg-light border-0 px-4" placeholder="John" required pattern="[A-Za-z\s]+"
+                     oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold text-muted small text-uppercase letter-spacing-1">Last Name</label>
-                                    <input type="text" class="form-control form-control-lg bg-light border-0 px-4" placeholder="Doe" required>
+                                    <input type="text" class="form-control form-control-lg bg-light border-0 px-4" placeholder="Doe" required pattern="[A-Za-z\s]+"
+                     oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')">
                                 </div>
                                 <div class="col-12">
                                     <label class="form-label fw-bold text-muted small text-uppercase letter-spacing-1">Email Address</label>
@@ -153,7 +155,7 @@
                 <div class="row align-items-center justify-content-center p-4 p-md-5 text-center">
                     <div class="col-lg-8 z-1">
                         <h2 class="display-6 fw-bolder text-white mb-4 lh-sm">Your Business Transformation Starts Here.</h2>
-                        <a href="services.html" class="custom-btn custom-btn-secondary text-primary fw-bold d-inline-flex align-items-center">
+                        <a href="404.html" class="custom-btn custom-btn-secondary text-primary fw-bold d-inline-flex align-items-center">
                             Explore Our Services <i class="fas fa-arrow-right ms-3 fs-5"></i>
                         </a>
                     </div>
