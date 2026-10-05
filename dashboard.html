@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard | Stackly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --header-height: 80px;
+            --bg-primary: #f8fafc;
+            --text-primary: #334155;
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --gradient-neon: linear-gradient(135deg, #f05a28 0%, #ffb800 100%);
+            --accent-cyan: #f05a28;
+            --accent-blue: #0f172a;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sidebar Styling (Premium Glass) */
+        .dash-sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1050;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-header {
+            height: var(--header-height);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-nav {
+            flex-grow: 1;
+            padding: 1.5rem 1rem;
+            overflow-y: auto;
+        }
+
+        .nav-item-dash {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item-dash .material-symbols-outlined {
+            font-size: 1.3rem;
+            transition: color 0.3s;
+        }
+
+        .nav-section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #64748b;
+            font-weight: 800;
+            margin: 24px 0 12px 16px;
+        }
+
+        .nav-item-dash:hover,
+        .nav-item-dash.active {
+            background: rgba(240, 90, 40, 0.15);
+            color: var(--accent-cyan);
+            transform: translateX(5px);
+        }
+
+        /* Main Content */
+        .dash-main {
+            margin-left: var(--sidebar-width);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        /* Header Styling */
+        .dash-header {
+            height: var(--header-height);
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .user-avatar {
+            flex-shrink: 0; 
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--gradient-neon);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(240, 90, 40, 0.3);
+        }
+
+        #dashFrame {
+            flex-grow: 1;
+            width: 100%;
+            border: none;
+            background: transparent;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(4px);
+            z-index: 1040;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 991.98px) {
+            .dash-sidebar {
+                transform: translateX(-100%);
+            }
+            .dash-sidebar.active {
+                transform: translateX(0);
+            }
+            .dash-main {
+                margin-left: 0;
+            }
+            .dash-header {
+                padding: 0 1rem;
+            }
+        }
+    
+        /* Theme Custom Utilities */
+        .text-theme { color: #f05a28 !important; }
+        .border-theme { border-color: #f05a28 !important; }
+        .bg-theme-light { background-color: rgba(240, 90, 40, 0.1) !important; }
+        
+        .btn-theme-outline {
+            color: #f05a28;
+            border-color: #f05a28;
+        }
+        .btn-theme-outline:hover {
+            color: #ffffff;
+            background-color: #f05a28;
+            border-color: #f05a28;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Animated Abstract Background for Dashboard Shell -->
+    <div class="position-fixed top-0 start-0 w-100 h-100 pointer-none"
+        style="background: radial-gradient(circle at top right, rgba(240, 90, 40, 0.08) 0%, transparent 40%), radial-gradient(circle at bottom left, rgba(15, 23, 42, 0.08) 0%, transparent 40%); z-index: -2;">
+    </div>
+
+    <!-- Sidebar -->
+    <div class="dash-sidebar" id="dashSidebar">
+        <div class="sidebar-header">
+            <div style="-webkit-mask: url('assets/images/logoStackly.webp') no-repeat center center; -webkit-mask-size: contain; mask: url('assets/images/logoStackly.webp') no-repeat center center; mask-size: contain; background: #ffffff; width: 150px; height: 45px;" aria-label="Stackly Logo"></div>
+        </div>
+        <div class="sidebar-nav"> 
+            
+            <!-- Client Navigation (5 Pages) -->
+            <div id="navClient" style="display:none">
+                <p class="nav-section-title">My Dashboard</p>
+                <a class="nav-item-dash active" data-page="client_overview" href="dashboard/client_overview.html">
+                    <span class="material-symbols-outlined">dashboard</span> Overview
+                </a>
+                <a class="nav-item-dash" data-page="client_projects" href="dashboard/client_projects.html">
+                    <span class="material-symbols-outlined">work</span> Projects
+                </a>
+                <a class="nav-item-dash" data-page="client_invoices" href="dashboard/client_invoices.html">
+                    <span class="material-symbols-outlined">receipt_long</span> Invoices
+                </a>
+                <a class="nav-item-dash" data-page="client_reports" href="dashboard/client_reports.html">
+                    <span class="material-symbols-outlined">analytics</span> Reports
+                </a>
+                <a class="nav-item-dash" data-page="client_support" href="dashboard/client_support.html">
+                    <span class="material-symbols-outlined">support_agent</span> Support
+                </a>
+            </div>
+
+            <!-- Consultant Navigation (5 Pages) -->
+            <div id="navConsultant" style="display:none">
+                <p class="nav-section-title">Consultant Portal</p>
+                <a class="nav-item-dash active" data-page="consultant_overview" href="dashboard/consultant_overview.html">
+                    <span class="material-symbols-outlined">dashboard</span> Overview
+                </a>
+                <a class="nav-item-dash" data-page="consultant_tasks" href="dashboard/consultant_tasks.html">
+                    <span class="material-symbols-outlined">task_alt</span> Tasks
+                </a>
+                <a class="nav-item-dash" data-page="consultant_clients" href="dashboard/consultant_clients.html">
+                    <span class="material-symbols-outlined">group</span> Clients
+                </a>
+                <a class="nav-item-dash" data-page="consultant_timesheet" href="dashboard/consultant_timesheet.html">
+                    <span class="material-symbols-outlined">schedule</span> Timesheet
+                </a>
+                <a class="nav-item-dash" data-page="consultant_analytics" href="dashboard/consultant_analytics.html">
+                    <span class="material-symbols-outlined">insights</span> Analytics
+                </a>
+            </div>
+
+            <!-- Executive Navigation (5 Pages) -->
+            <div id="navExecutive" style="display:none">
+                <p class="nav-section-title">Executive Suite</p>
+                <a class="nav-item-dash active" data-page="executive_overview" href="dashboard/executive_overview.html">
+                    <span class="material-symbols-outlined">dashboard</span> Overview
+                </a>
+                <a class="nav-item-dash" data-page="executive_financials" href="dashboard/executive_financials.html">
+                    <span class="material-symbols-outlined">account_balance</span> Financials
+                </a>
+                <a class="nav-item-dash" data-page="executive_team" href="dashboard/executive_team.html">
+                    <span class="material-symbols-outlined">groups</span> Team KPI
+                </a>
+                <a class="nav-item-dash" data-page="executive_strategy" href="dashboard/executive_strategy.html">
+                    <span class="material-symbols-outlined">track_changes</span> Strategy OKRs
+                </a>
+                <a class="nav-item-dash" data-page="executive_market" href="dashboard/executive_market.html">
+                    <span class="material-symbols-outlined">public</span> Market Trends
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dash-main">
+        <header class="dash-header">
+            <div class="d-flex align-items-center gap-3"> 
+                <button class="btn border p-2 d-flex align-items-center justify-content-center shadow-sm d-lg-none"
+                    id="sidebarToggle" style="border-radius: 8px; background: #fff;"> 
+                    <span class="material-symbols-outlined text-dark">menu</span> 
+                </button>
+                <div class="d-flex flex-column d-none d-sm-flex">
+                    <h5 class="mb-0 fw-bold text-dark" style="letter-spacing: -0.5px;">Stackly Portal</h5> 
+                    <span class="badge mt-1 fw-bold text-uppercase border border-theme text-theme bg-theme-light" id="roleBadge"
+                        style="width: fit-content; letter-spacing: 1px;">ROLE</span>
+                </div>
+            </div>
+            <div class="d-flex align-items-center gap-3 gap-md-4">
+                <div class="text-end d-none d-md-block">
+                    <div class="fw-bold text-dark" id="navUserName">User Name</div>
+                    <div class="small text-muted" id="navUserEmail">email@example.com</div>
+                </div>
+                <div class="d-flex align-items-center gap-3 border-start ps-3">
+                    <div class="user-avatar text-white" id="userAvatar">U</div> 
+                    <button onclick="window.top.location.href='index.html'"
+                        class="btn btn-theme-outline rounded-pill px-3 py-2 fw-bold d-flex align-items-center gap-2 shadow-sm transition-all"
+                        id="signoutBtn" style="font-size: 0.85rem;"> 
+                        <span class="material-symbols-outlined" style="font-size: 1.1rem;">logout</span> 
+                        <span class="d-none d-md-inline">Sign Out</span>
+                    </button>
+                </div>
+            </div>
+        </header> 
+        
+        <!-- Dashboard Content Iframe --> 
+        <iframe id="dashFrame" src="about:blank"></iframe>
+    </div>
+    
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

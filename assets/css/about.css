@@ -1,0 +1,8 @@
+
+/* About Page Specific Styles */
+.timeline-section { position: relative; }
+.timeline-item { position: relative; padding-left: 40px; margin-bottom: 30px; }
+.timeline-item::before { content: ''; position: absolute; left: 0; top: 0; width: 2px; height: 100%; background: var(--primary-color); }
+.timeline-item::after { content: ''; position: absolute; left: -4px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); }
+.award-card { transition: 0.3s; border-radius: 10px; overflow: hidden; }
+.award-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & Messaging</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body { background: transparent; font-family: 'Inter', sans-serif; color: #334155; padding: 1.5rem; overflow-x: hidden; }
+        .glass-card { background: #fff; border-radius: 1rem; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); padding: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .glass-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .text-theme { color: #f05a28 !important; }
+        .bg-theme { background-color: #f05a28 !important; }
+        .bg-theme-light { background: rgba(240, 90, 40, 0.1) !important; }
+        .icon-box { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; }
+        .table-custom th { border-bottom: 2px solid #f1f5f9; color: #64748b; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; padding: 1rem; white-space: nowrap; }
+        .table-custom td { padding: 1rem; vertical-align: middle; border-bottom: 1px solid #f1f5f9; color: #334155; white-space: nowrap; }
+        @media (max-width: 575.98px) {
+            body { padding: 1rem; }
+            .glass-card { padding: 1.25rem; }
+            .table-responsive { overflow-x: auto; margin-bottom: 1rem; }
+            .chart-container { min-height: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3">
+        <div class="d-flex align-items-center">
+            <h4 class="mb-0 text-dark">Support & Messaging</h4>
+            <span class="badge bg-theme-light text-theme ms-3 rounded-pill px-3 py-2 d-none d-sm-block">Client</span>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <button class="btn btn-outline-secondary rounded-pill btn-sm px-3 fw-bold d-flex align-items-center"><span class="material-symbols-outlined align-middle fs-6 me-1">download</span> Export</button>
+            <button class="btn btn-primary bg-theme border-0 rounded-pill btn-sm px-3 fw-bold d-flex align-items-center"><span class="material-symbols-outlined align-middle fs-6 me-1">add</span> New</button>
+        </div>
+    </div>
+    <div class="row g-4"><div class="col-lg-5"><div class="glass-card"><h5 class="mb-4">Create New Ticket</h5><form><div class="mb-3"><label class="form-label small fw-bold text-muted">Category</label><select class="form-select"><option>Project Update</option><option>Billing Question</option><option>Technical Issue</option></select></div><div class="mb-3"><label class="form-label small fw-bold text-muted">Priority</label><select class="form-select"><option>Normal</option><option>High</option><option>Urgent</option></select></div><div class="mb-3"><label class="form-label small fw-bold text-muted">Subject</label><input type="text" class="form-control" placeholder="Brief subject"></div><div class="mb-4"><label class="form-label small fw-bold text-muted">Message</label><textarea class="form-control" rows="6" placeholder="Describe your issue..."></textarea></div><button type="button" class="btn btn-primary bg-theme border-0 rounded-pill w-100 fw-bold py-2">Submit Ticket</button></form></div></div><div class="col-lg-7"><div class="glass-card h-auto mb-4"><div class="d-flex justify-content-between mb-4"><h5 class="mb-0">Recent Tickets</h5><button class="btn btn-sm btn-light rounded-pill">View All</button></div><div class="table-responsive"><table class="table table-custom"><thead><tr><th>Ticket #</th><th>Subject</th><th>Status</th><th>Date</th><th>Action</th></tr></thead><tbody><tr><td><strong class="text-dark">TCK-900</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-warning bg-opacity-10 text-warning">Open</span></td><td>Oct 1, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-901</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-success bg-opacity-10 text-success">Resolved</span></td><td>Oct 2, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-902</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-warning bg-opacity-10 text-warning">Open</span></td><td>Oct 3, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-903</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-success bg-opacity-10 text-success">Resolved</span></td><td>Oct 4, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-904</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-warning bg-opacity-10 text-warning">Open</span></td><td>Oct 5, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-905</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-success bg-opacity-10 text-success">Resolved</span></td><td>Oct 6, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-906</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-warning bg-opacity-10 text-warning">Open</span></td><td>Oct 7, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr><tr><td><strong class="text-dark">TCK-907</strong></td><td>Need update on phase 2 deliverables</td><td><span class="badge bg-success bg-opacity-10 text-success">Resolved</span></td><td>Oct 8, 2026</td><td><button class="btn btn-sm btn-light rounded-pill px-3 fw-bold shadow-sm">View Thread</button></td></tr></tbody></table></div></div><div class="glass-card h-auto"><h5 class="mb-4">Frequently Asked Questions</h5><div class="accordion" id="faqAcc"><div class="accordion-item border-0 mb-2"><h2 class="accordion-header"><button class="accordion-button bg-light rounded shadow-sm fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c1">How do I access historical reports?</button></h2><div id="c1" class="accordion-collapse collapse show"><div class="accordion-body text-muted small">Go to the Reports tab and use the filter buttons to find reports from previous years.</div></div></div><div class="accordion-item border-0 mb-2"><h2 class="accordion-header"><button class="accordion-button collapsed bg-light rounded shadow-sm fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#c2">When are invoices generated?</button></h2><div id="c2" class="accordion-collapse collapse"><div class="accordion-body text-muted small">Invoices are automatically generated on the 1st of every month for active retainers.</div></div></div></div></div></div></div>
+    
+    
+<script>
+    document.addEventListener('click', function(e) {
+        const target = e.target.closest('a, button');
+        if (target) {
+            e.preventDefault();
+            window.top.location.href = '../404.html';
+        }
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

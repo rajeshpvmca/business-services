@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body { background: transparent; font-family: 'Inter', sans-serif; color: #334155; padding: 1.5rem; overflow-x: hidden; }
+        .glass-card { background: #fff; border-radius: 1rem; border: none; box-shadow: 0 4px 15px rgba(0,0,0,0.03); padding: 1.5rem; margin-bottom: 1.5rem; transition: transform 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+        .glass-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .text-theme { color: #f05a28 !important; }
+        .bg-theme { background-color: #f05a28 !important; }
+        .bg-theme-light { background: rgba(240, 90, 40, 0.1) !important; }
+        .icon-box { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #0f172a; }
+        .table-custom th { border-bottom: 2px solid #f1f5f9; color: #64748b; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; padding: 1rem; white-space: nowrap; }
+        .table-custom td { padding: 1rem; vertical-align: middle; border-bottom: 1px solid #f1f5f9; color: #334155; white-space: nowrap; }
+        @media (max-width: 575.98px) {
+            body { padding: 1rem; }
+            .glass-card { padding: 1.25rem; }
+            .table-responsive { overflow-x: auto; margin-bottom: 1rem; }
+            .chart-container { min-height: 280px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 gap-3">
+        <div class="d-flex align-items-center">
+            <h4 class="mb-0 text-dark">Performance Analytics</h4>
+            <span class="badge bg-theme-light text-theme ms-3 rounded-pill px-3 py-2 d-none d-sm-block">Consultant</span>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+            <button class="btn btn-outline-secondary rounded-pill btn-sm px-3 fw-bold d-flex align-items-center"><span class="material-symbols-outlined align-middle fs-6 me-1">download</span> Export</button>
+            <button class="btn btn-primary bg-theme border-0 rounded-pill btn-sm px-3 fw-bold d-flex align-items-center"><span class="material-symbols-outlined align-middle fs-6 me-1">add</span> New</button>
+        </div>
+    </div>
+    <div class="row g-4"><div class="col-lg-4"><div class="glass-card"><h5 class="mb-4">Efficiency Score</h5><div id="chart-eff" class="chart-container d-flex justify-content-center"></div><p class="text-center text-muted mt-3 small">Based on task completion and billable ratio.</p></div></div><div class="col-lg-8"><div class="glass-card"><h5 class="mb-4">Hours by Client (This Month)</h5><div id="chart-bar" class="chart-container"></div></div></div><div class="col-lg-6"><div class="glass-card"><h5 class="mb-4">Task Distribution</h5><div id="chart-donut" class="chart-container d-flex justify-content-center"></div></div></div><div class="col-lg-6"><div class="glass-card"><h5 class="mb-4">Performance Highlights</h5><ul class="list-group list-group-flush mt-2"><li class="list-group-item bg-transparent border-bottom px-0 py-3 d-flex align-items-center"><div class="icon-box bg-success bg-opacity-10 text-success me-4"><span class="material-symbols-outlined">trending_up</span></div><div><strong class="text-dark fs-6">Top Performer</strong><p class="small text-muted mb-0 mt-1">You are in the top 10% of consultants this month.</p></div></li><li class="list-group-item bg-transparent border-bottom px-0 py-3 d-flex align-items-center"><div class="icon-box bg-warning bg-opacity-10 text-warning me-4"><span class="material-symbols-outlined">star</span></div><div><strong class="text-dark fs-6">Client Rating</strong><p class="small text-muted mb-0 mt-1">Maintained a 4.9 average for 6 consecutive months.</p></div></li><li class="list-group-item bg-transparent border-bottom-0 px-0 py-3 d-flex align-items-center"><div class="icon-box bg-info bg-opacity-10 text-info me-4"><span class="material-symbols-outlined">speed</span></div><div><strong class="text-dark fs-6">Fast Execution</strong><p class="small text-muted mb-0 mt-1">Average task completion time is 15% faster than average.</p></div></li></ul></div></div></div>
+    <script>
+    new ApexCharts(document.querySelector("#chart-eff"), {series: [85], chart: { type: 'radialBar', height: 350 }, plotOptions: { radialBar: { hollow: { size: '65%' }, dataLabels: { value: { fontSize: '2rem', fontWeight: 800, color: '#0f172a' } } } }, colors: ['#f05a28'], labels: ['Efficiency']}).render();
+    new ApexCharts(document.querySelector("#chart-bar"), {series: [{name: 'Hours', data: [44, 55, 41, 67, 22, 43]}], chart: { type: 'bar', height: 350, toolbar:{show:false} }, colors: ['#0f172a'], plotOptions:{bar:{borderRadius:6}}, xaxis: { categories: ['Innovatech', 'Nexus', 'Alpha', 'Beta', 'Gamma', 'Delta'] }}).render();
+    new ApexCharts(document.querySelector("#chart-donut"), {series: [44, 55, 13, 33], labels: ['Strategy', 'Audit', 'Meetings', 'Reporting'], chart: { type: 'donut', height: 350 }, colors: ['#0f172a', '#f05a28', '#ffb800', '#cbd5e1'], plotOptions:{pie:{donut:{size:'70%'}}}, legend:{position:'bottom'}}).render();
+</script>
+    
+<script>
+    document.addEventListener('click', function(e) {
+        const target = e.target.closest('a, button');
+        if (target) {
+            e.preventDefault();
+            window.top.location.href = '../404.html';
+        }
+    });
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

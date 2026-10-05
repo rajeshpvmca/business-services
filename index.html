@@ -1,0 +1,965 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Services - Corporate Solutions</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logoStackly.webp" type="image/webp">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+   
+</head>
+<body>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Section 1: Hero Slider -->
+    <section class="hero-section bg-dark" id="home" style="padding:0; position: relative; overflow: hidden;">
+        <!-- ThreeJS Overlay -->
+        <div id="three-bg" style="z-index:0; position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none;"></div>
+        
+        <div class="swiper heroSwiper" style="position: relative; width: 100%; height: 100vh; min-height: 600px; z-index:1;">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide d-flex align-items-center position-relative">
+                    <div class="slide-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(240, 90, 40, 0.7)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop') center/cover; opacity: 0.65; z-index: 1;"></div>
+                    <div class="container position-relative" style="z-index: 2;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <span class="badge bg-primary rounded-pill text-uppercase shadow-sm letter-spacing-1 mb-3 py-2 px-3 hero-subtitle">Empowering Your Business</span>
+                                <h1 class="display-4 display-md-3 fw-bolder lh-sm mb-4 text-white hero-title">Strategic Solutions for Modern Enterprises</h1>
+                                <p class="fs-6 fs-md-5 mb-4 mb-md-5 text-white-50 hero-subtitle">We deliver innovative business services, consulting, and digital transformation strategies to accelerate your growth.</p>
+                                <div class="hero-btn d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                                    <a href="services.html" class="btn btn-primary btn-lg px-4  rounded-pill fw-bold shadow-sm">Our Services</a>
+                                    <a href="contact.html" class="btn btn-outline-light btn-lg px-4 rounded-pill fw-bold shadow-sm">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide d-flex align-items-center position-relative">
+                    <div class="slide-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(240, 90, 40, 0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop') center/cover; opacity: 0.65; z-index: 1;"></div>
+                    <div class="container position-relative" style="z-index: 2;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <span class="badge bg-primary rounded-pill text-uppercase shadow-sm letter-spacing-1 mb-3 py-2 px-3 hero-subtitle">Global Expertise</span>
+                                <h1 class="display-4 display-md-3 fw-bolder lh-sm mb-4 text-white hero-title">Transforming Workflows with Data-Driven Insights</h1>
+                                <p class="fs-6 fs-md-5 mb-4 mb-md-5 text-white-50 hero-subtitle">Optimize your organizational processes and achieve unparalleled operational efficiency.</p>
+                                <div class="hero-btn d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                                    <a href="about.html" class="btn btn-primary btn-lg px-5 rounded-pill fw-bold shadow-sm">Discover More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide d-flex align-items-center position-relative">
+                    <div class="slide-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(240, 90, 40, 0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop') center/cover; opacity: 0.65; z-index: 1;"></div>
+                    <div class="container position-relative" style="z-index: 2;">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8">
+                                <span class="badge bg-primary rounded-pill text-uppercase shadow-sm letter-spacing-1 mb-3 py-2 px-3 hero-subtitle">Financial Growth</span>
+                                <h1 class="display-4 display-md-3 fw-bolder lh-sm mb-4 text-white hero-title">Secure Your Company's Financial Future</h1>
+                                <p class="fs-6 fs-md-5 mb-4 mb-md-5 text-white-50 hero-subtitle">Expert financial planning, auditing, and risk management tailored to your specific industry.</p>
+                                <div class="hero-btn d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                                    <a href="contact.html" class="btn btn-primary btn-lg px-4  rounded-pill fw-bold shadow-sm">Get a Quote</a>
+                                    <a href="services.html" class="btn btn-outline-light btn-lg px-4 rounded-pill fw-bold shadow-sm">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Section 2: Features -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-6 mx-auto">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Why Choose Us</span>
+                    <h2 class="display-6 fw-bold mb-4">Our Competitive Advantage</h2>
+                </div>
+            </div>
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card feature-card h-100 p-4 p-lg-5 text-center shadow-sm">
+                        <div class="icon-box mx-auto"><i class="fas fa-chart-line"></i></div>
+                        <h4>Proven Strategies</h4>
+                        <p class="text-muted">Data-driven methodologies that guarantee measurable business outcomes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card feature-card h-100 p-4 p-lg-5 text-center shadow-sm">
+                        <div class="icon-box mx-auto"><i class="fas fa-users-cog"></i></div>
+                        <h4>Expert Consultants</h4>
+                        <p class="text-muted">A team of seasoned professionals with decades of industry experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card feature-card h-100 p-4 p-lg-5 text-center shadow-sm">
+                        <div class="icon-box mx-auto"><i class="fa-solid fa-headphones"></i></div>
+                        <h4>24/7 Support</h4>
+                        <p class="text-muted">Dedicated support channels ensuring your operations never halt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 3: About Summary -->
+    <section class="py-5 overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Image Column -->
+                <div class="col-lg-6 position-relative" data-aos="fade-right">
+                    <div class="about-image-wrapper position-relative z-1">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop" alt="About Us" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover; min-height: 400px; border-radius: 20px;">
+                        
+                        <!-- Floating Experience Card -->
+                        <div class="experience-card bg-white p-3 p-sm-4 rounded-4 shadow-lg d-flex align-items-center gap-3 position-absolute" 
+                             style="bottom: -20px; right: -20px; z-index: 2; border-left: 5px solid var(--primary-color);">
+                            <div class="icon-wrapper bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
+                                 style="width: 55px; height: 55px; font-size: 26px;">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h3 class="mb-0 fw-bolder text-dark">14+</h3>
+                                <p class="mb-0 text-muted small fw-bold text-uppercase">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">About Our Company</span>
+                    <h2 class="display-6 fw-bold mb-4 lh-sm text-dark">Driving Excellence in Business Services Since 2010</h2>
+                    <p class="mb-4 text-muted fs-6" style="line-height: 1.8;">Stackly is a premier business solutions provider. We specialize in transforming organizational workflows, optimizing financial health, and deploying cutting-edge technologies to keep you ahead of the curve.</p>
+                    
+                    <div class="row g-3 mb-4 mt-2">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fas fa-check-circle text-primary mt-1 fs-5"></i>
+                                <span class="fw-medium text-secondary">Tailored business strategies</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fas fa-check-circle text-primary mt-1 fs-5"></i>
+                                <span class="fw-medium text-secondary">Comprehensive market analysis</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fas fa-check-circle text-primary mt-1 fs-5"></i>
+                                <span class="fw-medium text-secondary">Sustainable growth modeling</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-start gap-2">
+                                <i class="fas fa-check-circle text-primary mt-1 fs-5"></i>
+                                <span class="fw-medium text-secondary">Dedicated expert support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4" style="opacity: 0.1;">
+                    
+                    <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-4">
+                        <a href="about.html" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow">Discover More</a>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; font-size: 20px;">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="mb-0 text-muted small fw-medium">Call Us Anytime</p>
+                                <h6 class="mb-0 fw-bolder text-dark">+91 9876543210</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Core Services -->
+    <section class="py-5 bg-light-blue">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-6 mx-auto">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">What We Do</span>
+                    <h2 class="display-6 fw-bold mb-4 lh-sm text-dark">Our Core Services</h2>
+                </div>
+            </div>
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card service-card h-100 p-4 p-lg-5 shadow-sm">
+                        <div class="icon-box"><i class="fas fa-briefcase"></i></div>
+                        <h4>Business Consulting</h4>
+                        <p class="text-muted">Strategic advisory to navigate complex business challenges.</p>
+                        <a href="services.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card service-card h-100 p-4 p-lg-5 shadow-sm">
+                        <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h4>Financial Advisory</h4>
+                        <p class="text-muted">Expert financial planning, auditing, and risk management.</p>
+                        <a href="services.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card service-card h-100 p-4 p-lg-5 shadow-sm">
+                        <div class="icon-box"><i class="fas fa-bullhorn"></i></div>
+                        <h4>Marketing Strategy</h4>
+                        <p class="text-muted">Data-backed marketing plans to enhance brand visibility.</p>
+                        <a href="services.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card service-card h-100 p-4 p-lg-5 shadow-sm">
+                        <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                        <h4>IT Solutions</h4>
+                        <p class="text-muted">Digital transformation, cloud integration, and cybersecurity.</p>
+                        <a href="services.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="card service-card h-100 p-4 p-lg-5 shadow-sm">
+                        <div class="icon-box"><i class="fas fa-handshake"></i></div>
+                        <h4>HR Management</h4>
+                        <p class="text-muted">Talent acquisition, employee relations, and compliance.</p>
+                        <a href="services.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="card service-card h-100 p-4 p-lg-5 shadow-sm">
+                        <div class="icon-box"><i class="fas fa-globe"></i></div>
+                        <h4>Global Expansion</h4>
+                        <p class="text-muted">Strategies and legal compliance for entering international markets.</p>
+                        <a href="services.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 5: Statistics -->
+    <section class="py-5 bg-dark position-relative overflow-hidden">
+        <!-- Optional Decorative Background Elements -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-10" style="mix-blend-mode: overlay;"></div>
+        
+        <div class="container position-relative z-1">
+            <div class="row g-4 g-lg-5 justify-content-center text-center">
+                
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-card p-3 p-md-4 rounded-4 position-relative h-100 d-flex flex-column justify-content-center">
+                        <div class="stat-icon-wrapper mb-3 text-white opacity-25">
+                            <i class="fas fa-users fa-2x"></i>
+                        </div>
+                        <h3 class="display-6 fw-bolder text-white mb-2">500<span class="text-primary">+</span></h3>
+                        <p class="mb-0 text-white-50 fw-semibold text-uppercase letter-spacing-1 small" style="font-size: 0.75rem;">Clients Served</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card p-3 p-md-4 rounded-4 position-relative h-100 d-flex flex-column justify-content-center">
+                        <div class="stat-icon-wrapper mb-3 text-white opacity-25">
+                            <i class="fas fa-award fa-2x"></i>
+                        </div>
+                        <h3 class="display-6 fw-bolder text-white mb-2">15<span class="text-primary">+</span></h3>
+                        <p class="mb-0 text-white-50 fw-semibold text-uppercase letter-spacing-1 small" style="font-size: 0.75rem;">Years Experience</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-card p-3 p-md-4 rounded-4 position-relative h-100 d-flex flex-column justify-content-center">
+                        <div class="stat-icon-wrapper mb-3 text-white opacity-25">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h3 class="display-6 fw-bolder text-white mb-2">98<span class="text-primary">%</span></h3>
+                        <p class="mb-0 text-white-50 fw-semibold text-uppercase letter-spacing-1 small" style="font-size: 0.75rem;">Success Rate</p>
+                    </div>
+                </div>
+
+                <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card p-3 p-md-4 rounded-4 position-relative h-100 d-flex flex-column justify-content-center">
+                        <div class="stat-icon-wrapper mb-3 text-white opacity-25">
+                            <i class="fas fa-user-tie fa-2x"></i>
+                        </div>
+                        <h3 class="display-6 fw-bolder text-white mb-2">150<span class="text-primary">+</span></h3>
+                        <p class="mb-0 text-white-50 fw-semibold text-uppercase letter-spacing-1 small" style="font-size: 0.75rem;">Expert Consultants</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 6: Portfolio / Case Studies -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-end mb-5">
+                <div class="col-lg-8 mb-4 mb-lg-0 text-center text-lg-start">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Case Studies</span>
+                    <h2 class="display-6 fw-bold lh-sm text-dark mb-0">Our Successful Projects</h2>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="services.html" class="btn btn-outline-primary btn-lg rounded-pill px-4 fw-bold">View All Projects <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card portfolio-premium-card border-0 rounded-4 overflow-hidden position-relative">
+                        <!-- Replaced image with a fresh, working finance image -->
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" class="portfolio-premium-img" alt="Corporate Merger">
+                        <div class="portfolio-premium-overlay"></div>
+                        <div class="portfolio-premium-content p-4 p-md-5 d-flex flex-column">
+                            <div class="mt-auto">
+                                <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold text-uppercase letter-spacing-1 shadow-sm mb-3">Finance</span>
+                                <h3 class="fw-bolder text-white mb-2">Corporate Merger Strategy</h3>
+                                <div class="portfolio-premium-hidden">
+                                    <p class="text-white-50 mb-4 fw-medium" style="line-height: 1.6;">Facilitated a $50M merger ensuring seamless financial integration and strategic market positioning for our client.</p>
+                                    <a href="#" class="text-white text-decoration-none fw-bold hover-primary-color d-inline-flex align-items-center">
+                                        View Case Study 
+                                        <div class="bg-primary text-white rounded-circle ms-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card portfolio-premium-card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" class="portfolio-premium-img" alt="Cloud Infrastructure">
+                        <div class="portfolio-premium-overlay"></div>
+                        <div class="portfolio-premium-content p-4 p-md-5 d-flex flex-column">
+                            <div class="mt-auto">
+                                <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold text-uppercase letter-spacing-1 shadow-sm mb-3">Technology</span>
+                                <h3 class="fw-bolder text-white mb-2">Cloud Infrastructure</h3>
+                                <div class="portfolio-premium-hidden">
+                                    <p class="text-white-50 mb-4 fw-medium" style="line-height: 1.6;">Upgraded legacy systems to scalable AWS architecture, improving speed and processing power by over 300%.</p>
+                                    <a href="#" class="text-white text-decoration-none fw-bold hover-primary-color d-inline-flex align-items-center">
+                                        View Case Study 
+                                        <div class="bg-primary text-white rounded-circle ms-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card portfolio-premium-card border-0 rounded-4 overflow-hidden position-relative">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" class="portfolio-premium-img" alt="Legal Compliance">
+                        <div class="portfolio-premium-overlay"></div>
+                        <div class="portfolio-premium-content p-4 p-md-5 d-flex flex-column">
+                            <div class="mt-auto">
+                                <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold text-uppercase letter-spacing-1 shadow-sm mb-3">Legal</span>
+                                <h3 class="fw-bolder text-white mb-2">Global Compliance Audit</h3>
+                                <div class="portfolio-premium-hidden">
+                                    <p class="text-white-50 mb-4 fw-medium" style="line-height: 1.6;">Streamlined international compliance for a global firm, reducing potential risk penalties by 90%.</p>
+                                    <a href="#" class="text-white text-decoration-none fw-bold hover-primary-color d-inline-flex align-items-center">
+                                        View Case Study 
+                                        <div class="bg-primary text-white rounded-circle ms-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 7: Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-6 mx-auto">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Testimonials</span>
+                    <h2 class="display-6 fw-bold mb-4 lh-sm text-dark">What Our Clients Say</h2>
+                </div>
+            </div>
+            
+            <div class="swiper testimonialSwiper pb-5 px-3">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="testimonial-card card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5 position-relative overflow-hidden bg-white">
+                            <i class="fas fa-quote-right position-absolute text-primary opacity-10" style="font-size: 8rem; top: -10px; right: -10px; z-index: 0;"></i>
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="d-flex mb-4" style="color: #FFB800;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="fst-italic text-muted mb-4 flex-grow-1 fs-6" style="line-height: 1.8;">"Stackly's consulting services completely transformed our operational workflow. We reduced costs by 20% in the first quarter alone."</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=150&auto=format&fit=crop" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" alt="Client 1" style="object-fit: cover;">
+                                    <div>
+                                        <h6 class="mb-1 fw-bolder text-dark">James Wilson</h6>
+                                        <small class="text-primary fw-bold text-uppercase" style="font-size: 0.7rem;">CEO, TechCorp</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="testimonial-card card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5 position-relative overflow-hidden bg-white">
+                            <i class="fas fa-quote-right position-absolute text-primary opacity-10" style="font-size: 8rem; top: -10px; right: -10px; z-index: 0;"></i>
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="d-flex mb-4" style="color: #FFB800;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="fst-italic text-muted mb-4 flex-grow-1 fs-6" style="line-height: 1.8;">"The financial advisory team provided insights that saved us from a disastrous investment. Highly recommend their professional and calculated approach."</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" alt="Client 2" style="object-fit: cover;">
+                                    <div>
+                                        <h6 class="mb-1 fw-bolder text-dark">Sarah Jenkins</h6>
+                                        <small class="text-primary fw-bold text-uppercase" style="font-size: 0.7rem;">CFO, GlobalTech</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="testimonial-card card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5 position-relative overflow-hidden bg-white">
+                            <i class="fas fa-quote-right position-absolute text-primary opacity-10" style="font-size: 8rem; top: -10px; right: -10px; z-index: 0;"></i>
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="d-flex mb-4" style="color: #FFB800;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p class="fst-italic text-muted mb-4 flex-grow-1 fs-6" style="line-height: 1.8;">"Their market analysis was spot on. We launched our new product seamlessly and achieved our 12-month sales goal in just under 4 months."</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=150&auto=format&fit=crop" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" alt="Client 3" style="object-fit: cover;">
+                                    <div>
+                                        <h6 class="mb-1 fw-bolder text-dark">Marcus Thorne</h6>
+                                        <small class="text-primary fw-bold text-uppercase" style="font-size: 0.7rem;">Marketing Director, Nova</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="testimonial-card card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5 position-relative overflow-hidden bg-white">
+                            <i class="fas fa-quote-right position-absolute text-primary opacity-10" style="font-size: 8rem; top: -10px; right: -10px; z-index: 0;"></i>
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="d-flex mb-4" style="color: #FFB800;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="fst-italic text-muted mb-4 flex-grow-1 fs-6" style="line-height: 1.8;">"An absolutely stellar team. The 24/7 dedicated support means we never have to worry about our servers going down during peak traffic hours."</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" alt="Client 4" style="object-fit: cover;">
+                                    <div>
+                                        <h6 class="mb-1 fw-bolder text-dark">Emily Chen</h6>
+                                        <small class="text-primary fw-bold text-uppercase" style="font-size: 0.7rem;">CTO, StartupHub</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="testimonial-card card border-0 shadow-sm rounded-4 h-100 p-4 p-md-5 position-relative overflow-hidden bg-white">
+                            <i class="fas fa-quote-right position-absolute text-primary opacity-10" style="font-size: 8rem; top: -10px; right: -10px; z-index: 0;"></i>
+                            <div class="position-relative z-1 d-flex flex-column h-100">
+                                <div class="d-flex mb-4" style="color: #FFB800;">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <p class="fst-italic text-muted mb-4 flex-grow-1 fs-6" style="line-height: 1.8;">"Stackly guided us through our entire international expansion. Their legal compliance knowledge is unmatched in the industry."</p>
+                                <div class="d-flex align-items-center mt-auto">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" class="rounded-circle me-3 border border-3 border-light shadow-sm" width="60" height="60" alt="Client 5" style="object-fit: cover;">
+                                    <div>
+                                        <h6 class="mb-1 fw-bolder text-dark">Daniel Smith</h6>
+                                        <small class="text-primary fw-bold text-uppercase" style="font-size: 0.7rem;">VP Operations, BuildCo</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-4"></div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 8: Team -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-6 mx-auto">
+                    <span class="badge bg-primary text-white bg-opacity-10 rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Expert Minds</span>
+                    <h2 class="display-6 fw-bold mb-4 lh-sm text-dark">Meet Our Leadership</h2>
+                </div>
+            </div>
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <!-- Member 1 -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card team-card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="team-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" class="team-img w-100" alt="Michael Roberts">
+                            
+                            <div class="team-social-overlay d-flex align-items-center justify-content-center gap-2 position-absolute w-100 h-100 top-0 start-0">
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white position-relative z-1">
+                            <h5 class="card-title fw-bold mb-1 text-dark">Michael Roberts</h5>
+                            <p class="text-primary fw-bold small text-uppercase letter-spacing-1 mb-0" style="font-size: 0.75rem;">Managing Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card team-card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="team-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop" class="team-img w-100" alt="Emma Thompson">
+                            
+                            <div class="team-social-overlay d-flex align-items-center justify-content-center gap-2 position-absolute w-100 h-100 top-0 start-0">
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white position-relative z-1">
+                            <h5 class="card-title fw-bold mb-1 text-dark">Emma Thompson</h5>
+                            <p class="text-primary fw-bold small text-uppercase letter-spacing-1 mb-0" style="font-size: 0.75rem;">Head of Consulting</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card team-card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="team-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" class="team-img w-100" alt="David Chen">
+                            
+                            <div class="team-social-overlay d-flex align-items-center justify-content-center gap-2 position-absolute w-100 h-100 top-0 start-0">
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white position-relative z-1">
+                            <h5 class="card-title fw-bold mb-1 text-dark">David Chen</h5>
+                            <p class="text-primary fw-bold small text-uppercase letter-spacing-1 mb-0" style="font-size: 0.75rem;">Lead Financial Advisor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card team-card border-0 rounded-4 overflow-hidden shadow-sm h-100">
+                        <div class="team-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop" class="team-img w-100" alt="Lisa Vance">
+                            
+                            <div class="team-social-overlay d-flex align-items-center justify-content-center gap-2 position-absolute w-100 h-100 top-0 start-0">
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <a href="#" class="team-social-link bg-white text-primary rounded-circle d-flex align-items-center justify-content-center shadow-sm">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center p-4 bg-white position-relative z-1">
+                            <h5 class="card-title fw-bold mb-1 text-dark">Lisa Vance</h5>
+                            <p class="text-primary fw-bold small text-uppercase letter-spacing-1 mb-0" style="font-size: 0.75rem;">Marketing Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 9: Pricing -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-6 mx-auto">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Pricing Plans</span>
+                    <h2 class="display-6 fw-bold mb-3 lh-sm text-dark">Transparent Packages</h2>
+                    <p class="text-muted">Choose the perfect plan for your business needs with absolutely no hidden fees.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 g-lg-5 align-items-center justify-content-center">
+                <!-- Basic Plan -->
+                <div class="col-sm-10 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card pricing-premium-card bg-white border-0 shadow-sm rounded-4 text-center h-100 position-relative">
+                        <div class="card-body p-4 p-md-5 d-flex flex-column">
+                            <h4 class="fw-bold mb-2">Basic</h4>
+                            <p class="text-muted small mb-4">Perfect for small startups</p>
+                            <h2 class="display-4 fw-bolder text-dark mb-4">$999<span class="fs-6 text-muted fw-medium">/mo</span></h2>
+                            
+                            <ul class="list-unstyled mb-5 text-start flex-grow-1">
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-3 fs-5"></i> <span class="fw-medium text-dark">Monthly Audit</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-3 fs-5"></i> <span class="fw-medium text-dark">Basic Support</span></li>
+                                <li class="mb-3 d-flex align-items-center text-muted opacity-50"><i class="fas fa-times-circle me-3 fs-5"></i> <span>Strategic Planning</span></li>
+                                <li class="mb-3 d-flex align-items-center text-muted opacity-50"><i class="fas fa-times-circle me-3 fs-5"></i> <span>Market Analysis</span></li>
+                            </ul>
+                            
+                            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill fw-bold w-100 mt-auto">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Plan (Featured) -->
+                <div class="col-sm-10 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card pricing-premium-card featured bg-primary text-white border-0 shadow-lg rounded-4 text-center h-100 position-relative z-1">
+                        <div class="position-absolute top-0 start-50 translate-middle">
+                            <span class="badge bg-white text-primary rounded-pill px-4 py-2 fw-bolder text-uppercase letter-spacing-1 shadow">Most Popular</span>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column mt-3">
+                            <h4 class="fw-bold mb-2">Professional</h4>
+                            <p class="text-white-50 small mb-4">Best for growing companies</p>
+                            <h2 class="display-4 fw-bolder mb-4">$1999<span class="fs-6 text-white-50 fw-medium">/mo</span></h2>
+                            
+                            <ul class="list-unstyled mb-5 text-start flex-grow-1">
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-white me-3 fs-5"></i> <span class="fw-medium">Weekly Audit</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-white me-3 fs-5"></i> <span class="fw-medium">24/7 Premium Support</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-white me-3 fs-5"></i> <span class="fw-medium">Strategic Planning</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-white me-3 fs-5"></i> <span class="fw-medium">Market Analysis</span></li>
+                            </ul>
+                            
+                            <a href="#" class="btn btn-light text-primary btn-lg rounded-pill fw-bold w-100 mt-auto hover-shadow">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-sm-10 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card pricing-premium-card bg-white border-0 shadow-sm rounded-4 text-center h-100 position-relative">
+                        <div class="card-body p-4 p-md-5 d-flex flex-column">
+                            <h4 class="fw-bold mb-2">Enterprise</h4>
+                            <p class="text-muted small mb-4">For large scale operations</p>
+                            <h2 class="display-4 fw-bolder text-dark mb-4">Custom</h2>
+                            
+                            <ul class="list-unstyled mb-5 text-start flex-grow-1">
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-3 fs-5"></i> <span class="fw-medium text-dark">Dedicated Consultant</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-3 fs-5"></i> <span class="fw-medium text-dark">Full Service Suite</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-3 fs-5"></i> <span class="fw-medium text-dark">Custom Reporting</span></li>
+                                <li class="mb-3 d-flex align-items-center"><i class="fas fa-check-circle text-primary me-3 fs-5"></i> <span class="fw-medium text-dark">Global Support</span></li>
+                            </ul>
+                            
+                            <a href="#" class="btn btn-outline-primary btn-lg rounded-pill fw-bold w-100 mt-auto">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 10: Clients -->
+    <section class="py-5 border-top border-bottom bg-white overflow-hidden position-relative">
+        <div class="container mb-4 text-center position-relative z-1">
+            <p class="text-muted fw-bold text-uppercase letter-spacing-1 small mb-0">Trusted by innovative companies worldwide</p>
+        </div>
+        <div class="marquee-container position-relative w-100">
+            <!-- Fade edges for smooth disappearing effect -->
+            <div class="marquee-fade-left"></div>
+            <div class="marquee-fade-right"></div>
+            
+            <div class="marquee-content d-flex align-items-center">
+                <!-- Group 1 -->
+                <div class="marquee-group d-flex align-items-center justify-content-around">
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-aws"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-google"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-microsoft"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-apple"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-stripe"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-salesforce"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-hubspot"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-slack"></i></div>
+                </div>
+                <!-- Group 2 (Duplicate for infinite seamless scroll) -->
+                <div class="marquee-group d-flex align-items-center justify-content-around" aria-hidden="true">
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-aws"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-google"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-microsoft"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-apple"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-stripe"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-salesforce"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-hubspot"></i></div>
+                    <div class="client-icon px-3 px-md-5"><i class="fa-brands fa-slack"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 11: FAQ -->
+    <section class="py-5 bg-light-blue position-relative overflow-hidden">
+        <div class="container">
+            <div class="row g-4 g-lg-5 align-items-center">
+                
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <span class="badge bg-primary text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">FAQ</span>
+                    <h2 class="display-6 fw-bold lh-sm text-dark mb-4">Frequently Asked Questions</h2>
+                    <p class="text-muted fs-5 mb-5" style="line-height: 1.8;">Find quick answers to common queries about our business services, consulting processes, and enterprise pricing.</p>
+                    
+                    <!-- Contact Support Card -->
+                    <div class="card border-0 rounded-4 shadow-sm p-4 d-flex flex-row align-items-center bg-white premium-hover-card">
+                        <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 60px; height: 60px;">
+                            <i class="fa-solid fa-comment-dots text-white fs-3"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Still have questions?</h5>
+                            <p class="text-muted small mb-0">We're happy to help.</p>
+                        </div>
+                        <a href="contact.html" class="btn btn-primary rounded-pill px-4 py-2 ms-auto fw-bold shadow-sm flex-shrink-0">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="accordion premium-accordion" id="accordionFAQ">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item border-0 bg-white rounded-4 shadow-sm mb-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold py-4 px-4 fs-5 bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What industries do you serve?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted fs-6" style="line-height: 1.7;">
+                                    We serve a wide range of industries including finance, technology, healthcare, retail, and manufacturing. Our expert consultants bring decades of specialized experience to each sector to ensure maximum growth and compliance.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item border-0 bg-white rounded-4 shadow-sm mb-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 fs-5 bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    How long does a consulting engagement last?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted fs-6" style="line-height: 1.7;">
+                                    Projects can range from a 2-week intensive audit to multi-year retainer contracts depending on your specific needs, business size, and long-term strategic goals.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item border-0 bg-white rounded-4 shadow-sm mb-3 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 fs-5 bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you offer custom pricing?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted fs-6" style="line-height: 1.7;">
+                                    Yes, our Enterprise tier is completely customized to fit the exact scope and scale of your business requirements. We'll work directly with your executive team to build a package that makes financial sense.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item border-0 bg-white rounded-4 shadow-sm mb-0 overflow-hidden">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold py-4 px-4 fs-5 bg-white text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    What is your average response time?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body px-4 pb-4 pt-0 text-muted fs-6" style="line-height: 1.7;">
+                                    For our Professional and Enterprise clients, we guarantee a priority response time of under 2 hours, 24/7. Basic tier clients receive comprehensive responses within 1 business day.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 12: Blog / News -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-6 mx-auto">
+                    <span class="badge bg-primary bg-opacity-10 text-white rounded-pill mb-3 py-2 px-3 fw-bold text-uppercase letter-spacing-1 shadow-sm">Insights</span>
+                    <h2 class="display-6 fw-bold lh-sm text-dark mb-0">Latest News & Articles</h2>
+                </div>
+            </div>
+            <div class="row g-4 g-lg-5 justify-content-center">
+                <!-- Article 1 -->
+                <div class="col-sm-10 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card blog-premium-card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-white">
+                        <div class="blog-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop" class="blog-img w-100" alt="News">
+                            <div class="position-absolute top-0 start-0 m-3 z-1">
+                                <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold shadow-sm text-uppercase letter-spacing-1" style="font-size: 0.7rem;">Strategy</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3 text-muted small fw-medium">
+                                <i class="far fa-calendar-alt me-2 text-primary"></i> Oct 01, 2026
+                                <span class="mx-3 opacity-25">|</span>
+                                <i class="far fa-clock me-2 text-primary"></i> 5 min read
+                            </div>
+                            <h4 class="card-title fw-bold mb-3 text-dark blog-title">The Future of Remote Work</h4>
+                            <p class="card-text text-muted mb-4 flex-grow-1" style="line-height: 1.6;">Analyzing how modern businesses are adapting to hybrid environments permanently and the impact on corporate culture.</p>
+                            
+                            <a href="#" class="blog-link text-decoration-none fw-bold mt-auto d-inline-flex align-items-center">
+                                Read Article <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="col-sm-10 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card blog-premium-card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-white">
+                        <div class="blog-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" class="blog-img w-100" alt="News">
+                            <div class="position-absolute top-0 start-0 m-3 z-1">
+                                <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold shadow-sm text-uppercase letter-spacing-1" style="font-size: 0.7rem;">Finance</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3 text-muted small fw-medium">
+                                <i class="far fa-calendar-alt me-2 text-primary"></i> Sep 28, 2026
+                                <span class="mx-3 opacity-25">|</span>
+                                <i class="far fa-clock me-2 text-primary"></i> 8 min read
+                            </div>
+                            <h4 class="card-title fw-bold mb-3 text-dark blog-title">Financial Strategies for 2027</h4>
+                            <p class="card-text text-muted mb-4 flex-grow-1" style="line-height: 1.6;">Prepare your enterprise for upcoming global economic shifts with these top highly calculated financial tips.</p>
+                            
+                            <a href="#" class="blog-link text-decoration-none fw-bold mt-auto d-inline-flex align-items-center">
+                                Read Article <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="col-sm-10 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card blog-premium-card border-0 rounded-4 overflow-hidden shadow-sm h-100 bg-white">
+                        <div class="blog-img-wrapper position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" class="blog-img w-100" alt="News">
+                            <div class="position-absolute top-0 start-0 m-3 z-1">
+                                <span class="badge bg-primary text-white rounded-pill px-3 py-2 fw-bold shadow-sm text-uppercase letter-spacing-1" style="font-size: 0.7rem;">Technology</span>
+                            </div>
+                        </div>
+                        <div class="card-body p-4 p-md-5 d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3 text-muted small fw-medium">
+                                <i class="far fa-calendar-alt me-2 text-primary"></i> Sep 20, 2026
+                                <span class="mx-3 opacity-25">|</span>
+                                <i class="far fa-clock me-2 text-primary"></i> 4 min read
+                            </div>
+                            <h4 class="card-title fw-bold mb-3 text-dark blog-title">Leveraging AI in Business</h4>
+                            <p class="card-text text-muted mb-4 flex-grow-1" style="line-height: 1.6;">Discover how artificial intelligence is transforming standard operational procedures globally in just months.</p>
+                            
+                            <a href="#" class="blog-link text-decoration-none fw-bold mt-auto d-inline-flex align-items-center">
+                                Read Article <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Section 13: CTA -->
+    <section class="pb-5 pt-3 bg-light">
+        <div class="container">
+            <div class="bg-primary rounded-5 overflow-hidden shadow-lg position-relative cta-card" data-aos="zoom-in" data-aos-duration="800">
+                <!-- Background Texture inside the card -->
+                <div class="cta-bg-pattern position-absolute w-100 h-100 top-0 start-0" style="background: url('https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2000&auto=format&fit=crop') center/cover; opacity: 0.15; mix-blend-mode: overlay;"></div>
+                
+                <div class="row align-items-center justify-content-between p-4 p-md-5">
+                    <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0 z-1 p-2 p-md-4">
+                        <h2 class="display-6 fw-bolder text-white mb-3 lh-sm">Ready to Transform Your Business?</h2>
+                        <p class="text-white opacity-75 fs-5 mb-0 mx-auto mx-lg-0" style="max-width: 600px;">Contact our experts today for a free consultation and discover how Stackly can dramatically accelerate your company's growth.</p>
+                    </div>
+                    <div class="col-lg-auto text-center text-lg-end z-1 p-2 p-md-4">
+                        <a href="contact.html" class="btn btn-light btn-lg rounded-pill text-primary px-4 px-md-5 py-3 fw-bold shadow-lg hover-scale d-inline-flex align-items-center w-100 w-sm-auto justify-content-center">
+                            Get Started Now <i class="fas fa-rocket ms-3 fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Decorative Geometric Background Elements -->
+                <div class="cta-circle cta-circle-1"></div>
+                <div class="cta-circle cta-circle-2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
