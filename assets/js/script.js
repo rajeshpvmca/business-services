@@ -17,13 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
 function initApp() {
     highlightActiveLink();
 
-    // AOS Init
-    if(typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100
-        });
+
+
+    // Preloader & Delayed AOS Initialization
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        document.documentElement.style.overflow = 'hidden'; // Lock scroll globally
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            document.documentElement.style.overflow = ''; // Unlock scroll
+            
+            setTimeout(() => { preloader.remove(); document.body.classList.add('preloader-finished'); }, 600); // Cleanup DOM & Trigger Animations
+            
+            // Initialize AOS ONLY after preloader is completely gone
+            if(typeof AOS !== 'undefined') {
+                AOS.init({ duration: 800, once: true, offset: 100 });
+                setTimeout(() => AOS.refresh(), 100);
+            }
+        }, 2000); // Exactly 2 seconds delay
+    } else {
+        // Fallback if no preloader
+        if(typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 100 });
+        }
+        document.body.classList.add('preloader-finished');
     }
 
     // Sticky Navbar
@@ -114,11 +131,11 @@ function initApp() {
         const heroSwiper = new Swiper('.heroSwiper', {
             speed: 1000,
             
-            loop: true,
+            rewind: true,
             effect: 'fade',
             fadeEffect: { crossFade: true },
             autoplay: {
-                delay: 5000,
+                delay: 8000,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -227,5 +244,9 @@ function highlightActiveLink() {
         }
     });
 }
+
+
+
+
 
 
