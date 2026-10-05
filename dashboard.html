@@ -181,11 +181,11 @@
         .border-theme { border-color: #f05a28 !important; }
         .bg-theme-light { background-color: rgba(240, 90, 40, 0.1) !important; }
         
-        .btn-theme-outline {
+        .custom-btn-theme-outline {
             color: #f05a28;
             border-color: #f05a28;
         }
-        .btn-theme-outline:hover {
+        .custom-btn-theme-outline:hover {
             color: #ffffff;
             background-color: #f05a28;
             border-color: #f05a28;
@@ -274,7 +274,7 @@
     <div class="dash-main">
         <header class="dash-header">
             <div class="d-flex align-items-center gap-3"> 
-                <button class="btn border p-2 d-flex align-items-center justify-content-center shadow-sm d-lg-none"
+                <button class="custom-btn border p-2 d-flex align-items-center justify-content-center d-lg-none"
                     id="sidebarToggle" style="border-radius: 8px; background: #fff;"> 
                     <span class="material-symbols-outlined text-dark">menu</span> 
                 </button>
@@ -292,7 +292,7 @@
                 <div class="d-flex align-items-center gap-3 border-start ps-3">
                     <div class="user-avatar text-white" id="userAvatar">U</div> 
                     <button onclick="window.top.location.href='index.html'"
-                        class="btn btn-theme-outline rounded-pill px-3 py-2 fw-bold d-flex align-items-center gap-2 shadow-sm transition-all"
+                        class="custom-btn-theme-outline fw-bold d-flex align-items-center gap-2 transition-all"
                         id="signoutBtn" style="font-size: 0.85rem;"> 
                         <span class="material-symbols-outlined" style="font-size: 1.1rem;">logout</span> 
                         <span class="d-none d-md-inline">Sign Out</span>

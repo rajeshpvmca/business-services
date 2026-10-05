@@ -105,20 +105,20 @@
         }
 
         /* Buttons */
-        .btn-hover-scale {
+        .custom-btn-hover-scale {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .btn-hover-scale:hover {
+        .custom-btn-hover-scale:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(240, 90, 40, 0.3);
         }
 
-        .btn-outline-glass {
+        .custom-btn-outline-glass {
             color: #fff;
             border: 2px solid rgba(255, 255, 255, 0.2);
             background: rgba(255, 255, 255, 0.05);
         }
-        .btn-outline-glass:hover {
+        .custom-btn-outline-glass:hover {
             background: rgba(255, 255, 255, 0.15);
             border-color: rgba(255, 255, 255, 0.4);
             color: #fff;
@@ -131,13 +131,13 @@
                 padding: 3rem 1.5rem;
                 border-radius: 1.5rem;
             }
-            .btn-group-mobile {
+            .custom-btn-group-mobile {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
                 width: 100%;
             }
-            .btn-group-mobile .btn {
+            .custom-btn-group-mobile .custom-btn {
                 width: 100%;
                 margin: 0 !important;
             }
@@ -171,11 +171,11 @@
             </p>
             
             <!-- Responsive Buttons -->
-            <div class="btn-group-mobile d-flex justify-content-center gap-3">
-                <button onclick="window.history.back()" class="btn btn-outline-glass rounded-pill px-4 py-3 fw-bold btn-hover-scale d-inline-flex align-items-center justify-content-center gap-2">
+            <div class="custom-btn-group-mobile d-flex justify-content-center gap-3">
+                <button onclick="window.history.back()" class="custom-btn-outline-glass fw-bold custom-btn- d-inline-flex align-items-center justify-content-center gap-2">
                     <i class="fas fa-arrow-left"></i> Go Back
                 </button>
-                <a href="index.html" class="btn btn-primary rounded-pill px-4 py-3 fw-bold btn-hover-scale d-inline-flex align-items-center justify-content-center gap-2">
+                <a href="index.html" class="custom-btn custom-btn-primary fw-bold custom-btn- d-inline-flex align-items-center justify-content-center gap-2">
                     <i class="fas fa-home"></i> Back to Home
                 </a>
             </div>

@@ -1,54 +1,106 @@
-
-<footer class="footer py-5 bg-dark text-white">
-    <div class="container">
-        <div class="row gy-4">
+<footer class="footer py-5 bg-dark text-white position-relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at 10% 20%, rgba(240, 90, 40, 0.15) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(15, 23, 42, 0.3) 0%, transparent 40%); z-index: 0;"></div>
+    
+    <div class="container position-relative z-1">
+        <div class="row gy-4 gy-lg-5">
+            
+            <!-- 1. Brand & Social -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <img src="assets/images/logoStackly.webp" alt="Logo" class="mb-3" height="50" style="filter: brightness(0) invert(1);">
-                <p class="text-muted">Empowering businesses with innovative solutions, strategic consulting, and operational excellence. Your growth is our priority.</p>
-                <div class="social-icons mt-3">
-                    <a href="#" class="me-2"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#" class="me-2"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="me-2"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <img src="assets/images/logoStackly.webp" alt="Logo" class="mb-4" height="45" style="filter: brightness(0) invert(1);">
+                <p class="text-white-50 mb-4" style="max-width: 320px;">Empowering businesses with innovative solutions, strategic consulting, and operational excellence. Your growth is our priority.</p>
+                <div class="social-icons d-flex gap-2">
+                    <a href="#" class="rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow-sm"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow-sm"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow-sm"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none shadow-sm"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
+            
+            <!-- 2. Quick Links -->
             <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <h5 class="text-white mb-3">Quick Links</h5>
+                <h5 class="text-white fw-bold mb-4">Quick Links</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" class="">Home</a></li>
+                    <li><a href="about.html" class="">About Us</a></li>
+                    <li><a href="services.html" class="">Services</a></li>
+                    <li><a href="contact.html" class="">Contact</a></li>
                 </ul>
             </div>
+            
+            <!-- 3. Contact Us -->
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <h5 class="text-white mb-3">Our Services</h5>
+                 <h5 class="text-white fw-bold mb-4">Contact Us</h5>
                 <ul class="list-unstyled footer-links">
-                    <li><a href="services.html">Strategic Consulting</a></li>
-                    <li><a href="services.html">Financial Advisory</a></li>
-                    <li><a href="services.html">Market Analysis</a></li>
-                    <li><a href="services.html">Digital Transformation</a></li>
+                    <li class="mb-3">
+                        <a href="https://www.google.com/maps/search/?api=1&query=MMR+Complex,+Chinna+Thirupathi,+Salem,+Tamil+Nadu+636008" target="_blank" class="d-flex text-break">
+                            <i class="fas fa-map-marker-alt mt-1 me-3 text-primary flex-shrink-0"></i> 
+                            <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="tel:+1234567890" class="d-flex text-break">
+                            <i class="fas fa-phone-alt mt-1 me-3 text-primary flex-shrink-0"></i> 
+                            <span>+1 (234) 567-890</span>
+                        </a>
+                    </li>
+                    <li class="mb-3">
+                        <a href="mailto:contact@stackly.com" class="d-flex text-break">
+                            <i class="fas fa-envelope mt-1 me-3 text-primary flex-shrink-0"></i> 
+                            <span>contact@stackly.com</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
+            
+            <!-- 4. Newsletter -->
             <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <h5 class="text-white mb-3">Contact Us</h5>
-                <ul class="list-unstyled text-muted">
-                    <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Business Road, London, UK SW1A 1AA</li>
-                    <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> +91 9876543210</li>
-                    <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@businessservices.com</li>
-                </ul>
+                <h5 class="text-white fw-bold mb-4">Newsletter</h5>
+                <p class="text-white-50 small mb-4">Subscribe to our newsletter to receive the latest updates, enterprise insights, and exclusive offers.</p>
+                <form class="position-relative">
+                    <input type="email" class="form-control rounded-pill bg-white bg-opacity-10 border-0 text-white ps-4 pe-5 py-3 shadow-none w-100" placeholder="Email address..." required style="backdrop-filter: blur(5px);">
+                    <!-- We use custom-btn-primary to get the hover effect -->
+                    <button type="submit" class="custom-btn custom-btn-primary position-absolute rounded-circle d-flex align-items-center justify-content-center p-0" style="width: 44px; height: 44px; top: 4px; right: 4px;">
+                        <i class="fas fa-paper-plane m-0 text-white"></i>
+                    </button>
+                </form>
             </div>
+            
         </div>
-        <hr class="mt-4 mb-4 border-secondary">
+        
+        <hr class="mt-5 mb-4 border-white opacity-25">
+        
+        <!-- Copyright Row -->
         <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0 text-muted">&copy; 2026 Business Services. All rights reserved.</p>
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p class="mb-0 text-white-50 small">&copy; 2026 Stackly Business Services. All rights reserved.</p>
             </div>
-            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-                <a href="#" class="text-muted me-3 text-decoration-none">Privacy Policy</a>
-                <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+            <div class="col-md-6 text-center text-md-end">
+                <a href="#" class="text-white-50 small me-3 text-decoration-none hover-primary">Privacy Policy</a>
+                <a href="#" class="text-white-50 small text-decoration-none hover-primary">Terms of Service</a>
             </div>
         </div>
     </div>
 </footer>
-<button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="custom-btn custom-btn-primary rounded-circle d-flex align-items-center justify-content-center shadow-lg" title="Go to top" style="width: 45px; height: 45px; padding: 0; position: fixed; bottom: 20px; right: 20px; z-index: 1000; display: none; opacity: 0; transition: opacity 0.3s ease;">
+    <i class="fas fa-arrow-up m-0"></i>
+</button>
+
+<style>
+    /* Styling for the placeholder text inside the translucent input */
+    .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+    
+    /* Hover class for raw text links */
+    .hover-primary {
+        transition: color 0.3s ease;
+    }
+    .hover-primary:hover {
+        color: var(--primary-color) !important;
+    }
+</style>
+
+
